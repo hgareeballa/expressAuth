@@ -1,0 +1,26 @@
+<div class="container">
+    <h2>Bordered Table</h2>
+    <p>The .table-bordered class adds borders to a table:</p>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Title</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% products.forEach(p=> { %>
+                <tr>
+                    <td>
+                        <%= p.id %>
+                    </td>
+                    <td>
+                        <%= p.title %>
+                    </td>
+                    <td><button id="<%=p.id %>">Delete</button></td>
+                </tr>
+                <% }) %>
+        </tbody>
+    </table>
+</div>

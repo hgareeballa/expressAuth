@@ -1,0 +1,15 @@
+<%- include('header') -%>
+
+  <div class="container">
+    <h1>Products List</h1>
+    <ul>
+      <% products.forEach((item)=> { %>
+        <li>
+          <%= item.id %> -
+            <a href="/product/<%= item.id %>">
+              <%= item.title %>
+            </a>
+        </li>
+        <% }); %>
+    </ul>
+  </div>
